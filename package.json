@@ -1,0 +1,24 @@
+{
+  "name": "routingexample",
+  "version": "1.0.0",
+  "description": "this is routing node application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node storeProc/StoreProc.js"
+  },
+  "author": "kaushik",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.11.0",
+    "mocha": "^5.0.1",
+    "mssql": "^4.1.0",
+    "multer": "^1.3.0",
+    "path": "^0.12.7",
+    "should": "^13.2.1",
+    "sql": "^0.78.0",
+    "supertest": "^3.0.0",
+    "url": "^0.11.0"
+  }
+}

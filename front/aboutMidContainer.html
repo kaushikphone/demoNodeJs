@@ -1,0 +1,40 @@
+<h2>Multiple File Upload and Download using Node js</h2>
+<form id="uploadForm"
+      enctype="multipart/form-data"
+      action="/api/fileUpload"
+      method="post">
+    <input type="file" name="userPhoto" multiple />
+    <input type="submit" value="Upload File(s)" name="submit">
+    <input type='text' id='random' name='random'><br>
+    <span id = "status"></span>
+</form>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>File Extension</th>
+            <th>File path</th>
+        </tr>
+    </thead>
+    <tbody id="FileDataInserted">
+
+    </tbody>
+</table>
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <section id="responseBinding"></section>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

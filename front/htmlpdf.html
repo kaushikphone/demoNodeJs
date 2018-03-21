@@ -1,0 +1,48 @@
+<html>
+<head>
+    <% include header.html %>
+    <script type="text/javascript" src="src/htmlpdf.js"></script>
+    <style type="text/css">
+        .selectionbar {
+            background: #ffb7b7;
+            color: #fff;
+        }
+        .myProgress {
+            width: 100%;
+            background-color: #fff;
+        }
+        .myBar {
+            width: 1%;
+            height: 30px;
+            background-color: #ffb7b7;
+        }
+        .progress{
+            margin-bottom: 0!important;
+            height: 100%!important;
+            overflow: inherit;
+        }
+        .progress-bar {
+            float: left;
+            width: 0;
+    height: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+    margin-bottom: 0!important;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+    </style>
+</head>
+<body>
+<div>
+    <% include navigation.html %>
+    <div class="jumbotron"  style="padding:40px;">
+        <% include pdf.html %>
+    </div>
+</div>
+</body>
+</html>

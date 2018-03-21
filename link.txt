@@ -1,0 +1,153 @@
+https://expressjs.com/en/starter/installing.html
+https://ilovecoding.org/lessons/create-a-simple-http-server-with-nodejs
+http://lresende.blogspot.in/2015/01/nodejs-building-html-site-template.html
+http://www.giantflyingsaucer.com/blog/?p=4241
+http://www.c-sharpcorner.com/article/creating-web-api-using-node-js-and-mysql/
+http://www.c-sharpcorner.com/article/creating-web-api-using-node-js-and-mysql/
+https://codeburst.io/4-ways-for-making-http-s-requests-with-node-js-c524f999942d
+http://www.dotnetcurry.com/nodejs/1238/connect-sql-server-nodejs-mssql-package
+https://www.concretepage.com/angular-2/angular-2-http-post-example
+https://stackoverflow.com/questions/35212341/angular2-http-post-request-parameters [Angular post]
+http://blog.e-zest.com/how-to-handle-file-upload-with-node-and-express-4-0/
+https://stackfame.com/downloading-files-from-server-express
+https://code.tutsplus.com/tutorials/learning-server-side-javascript-with-nodejs--net-10044
+https://www.mindstick.com/Articles/1499/upload-and-download-file-in-node-js
+https://www.js-tutorials.com/javascript-tutorial/nodejs-example-upload-store-image-mysql-express-js/
+http://www.dotnetcurry.com/nodejs/1238/connect-sql-server-nodejs-mssql-package
+http://www.informit.com/articles/article.aspx?p=1947699&seqNum=3
+chrome://apps/
+npm init
+npm start
+npm install express --save--dev
+npm update
+npm install path --save--dev
+node index.js [to run node ]
+npm install ejs-locals --save [Templating Engine]
+npm install request --save
+npm uninstall request
+npm install cors
+npm install -g nodemon[File Watcher Event]
+https://stormpath.com/blog/build-nodejs-express-stormpath-app
+https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular
+http://www.mysqltutorial.org/mysql-nodejs/call-stored-procedures/
+node process version
+node -v
+node -p "process.versions"
+node -p "process.versions.v8"
+node -p "process.env"
+npm install mssql --save--dev
+npm install -g gulp
+npm install gulp --save--dev
+npm install --save--dev gulp-jshint gulp-jscs jshint-stylish
+npm install gulp-inject --save--dev
+gulp-inject
+npm install --save--dev gulp-nodemon
+npm install --style
+npm install wiredep--save--dev
+npm install jade --save--dev
+npm install -g angular-cli
+export const config={
+port:process.env.PORT || 8080
+$ node --inspect <your_file>.js
+}
+npm update
+node -p "process.release.lts"
+process.on('exit',(code)=>{
+  //something goes here
+})
+process.on('uncaughtException',(code)=>{
+});
+node Buffer
+Buffer.poolSize
+Buffer.alloc(8)
+Buffer.allocUnsafe(8)
+
+const
+
+https://app.pluralsight.com/player?course=nodejs-advanced&author=samer-buna&name=nodejs-advanced-m1&clip=4&mode=live
+http://www.tutorialsteacher.com/nodejs/access-sql-server-in-nodejs
+
+Command Prompt	cmd
+Component Services	comexp.msc
+Component Services	dcomcnfg
+Computer Management	compmgmt.msc
+
+125.20.11.180  --VPN IP
+
+kaushik@900-password
+test-UserName
+
+---app.js files---
+var express=require("express");
+var app=express();
+var port=5000;
+app.use(express.static("public"));
+app.use(express.static("src/views"));
+
+app.set('views','./src/views');
+app.set('view engine','jade');
+
+app.get('/',function(req,res) {
+  res.send("Hello world");
+  res.render('index');
+});
+app.get('/books',function(req,res) {
+  res.send("Hello Books");
+});
+app.listen(port,function(err){
+  console.log("Running server on port"+port);
+});
+
+-----------------------------gulp.js files--------------------------
+var gulp=require("gulp");
+var jshint=require("gulp-jshint");
+var jscs=require("gulp-jscs");
+var nodemon=require("gulp-nodemon");
+
+var jsfiles=['*.js','src/**/*.js'];
+gulp.task("style",function(){
+  return gulp.src(jsfiles)
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish', {
+          verbose:true
+        }))
+        .pipe(jscs());
+});
+gulp.task('inject',function(){
+    var wiredep=require("wiredep").stream;
+    var inject=require("gulp-inject");
+    var injectSrc=gulp.src([
+                  './public/css/*.css',
+                  './public/js/*.js'],{read:false});
+
+    var injectOptions={
+      ignorpath:'/public'
+    }
+
+    var options={
+      bowerJson:require('./bower.json'),
+      directory:'./public/lib',
+      ignorpath:'../../public'
+    }
+    return gulp.src('./src/views/*.html')
+                .pipe(wiredep(options))
+                .pipe(inject(injectSrc,injectOptions))
+                .pipe(gulp.dest('./src/views'));
+});
+
+gulp.task('serve',['style','inject'],function(){
+    
+
+});
+
+---------------nodemon---------------------------------
+
+----------------JADE& javascript-----------------------
+html
+  head
+    title myApp
+  body
+    h1 my title
+    p
+       h3 my sub tab
+    

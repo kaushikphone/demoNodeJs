@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="col-lg-8 pull-left">
+            <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Designation</th>
+                            <th>Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TableAppendBar"></tbody>
+                    </table>
+    </div>
+    <div class="col-lg-4 pull-right">
+        <p>Select through css</p>
+        <div class="checkbox">
+                <label><input type="checkbox" data-attr="checked" data-uncheked="unchecked" data-selector="firstName"  onclick="firstNameSelector(this)">Select All First Name</label>
+        </div>
+        <div class="checkbox">
+                <label><input type="checkbox" data-attr="checked" data-uncheked="unchecked" data-selector="lastName" onclick="firstNameSelector(this)">Select All last Name</label>
+        </div>
+        <div class="checkbox">
+                <label><input type="checkbox">Select All Designation</label>
+        </div>
+    </div>
+</div>

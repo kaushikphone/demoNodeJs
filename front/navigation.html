@@ -1,0 +1,10 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">Express HTML</a>
+        <ul class="nav navbar-nav">
+            <li <% if (pageTitle === 'index') { %>class="active" <% } %> ><a href="/" title="Home">Home</a></li>
+            <li <% if (pageTitle === 'about us') { %>class="active" <% } %> ><a href="/about" title="About">About</a></li>
+            <li <% if (pageTitle === 'htmlpdf') { %>class="active" <% } %> ><a href="/htmlpdf" title="htmltopdf">htmltopdf</a></li>
+        </ul>
+    </div>
+</nav>

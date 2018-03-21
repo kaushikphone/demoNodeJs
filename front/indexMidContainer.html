@@ -1,0 +1,61 @@
+<h1>Node JS CRUD Application</h1>
+<p>This is a simple Application where user can fetch, edit and delete records.</p>
+<p><a class="btn btn-danger btn-lg" href="javascript:void(0)" onclick="EmployeeRecords()" role="button">Add Employee Records</a></p>
+<ul>
+    <% messages.forEach(function(msgObj){ %>
+    <li><%= msgObj.name %> says: <%= msgObj.message %></li>
+    <% }) %>
+</ul>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Phone Number</th>
+            <th>Edit/Delete</th>
+        </tr>
+    </thead>
+    <tbody id="TableAppendBar">
+    </tbody>
+</table>
+<!--bootstrap modal for insert records-->
+<div id="InsertRecords" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Employee Records</h4>
+        </div>
+        <div class="modal-body">
+            <form action="" onsubmit="return InsertBarRecords()" method="POST">
+                <div class="form-group">
+                  <label for="fName">First Name:</label>
+                  <input type="text" class="form-control" id="fName" required>
+                </div>
+                <div class="form-group">
+                  <label for="lName">Last Name:</label>
+                  <input type="text" class="form-control" id="lName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lblEmail">Email:</label>
+                    <input type="email" class="form-control" id="lblEmail" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="lblDesig">Designation:</label>
+                    <input type="text" class="form-control" id="lblDesig" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="lblPhn">Phone Number:</label>
+                    <input type="text" class="form-control" id="lblPhn" required>
+                  </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <!--bootstrap modal for insert records-->
